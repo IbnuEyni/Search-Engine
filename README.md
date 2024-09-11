@@ -8,6 +8,10 @@ Features
     Search for documents using a query and retrieve the most similar documents based on content.
     View and delete uploaded documents.
 
+
+## Demo 
+![ Demo](1.png) ![ Demo](2.png) ![ Demo](3.png) ![ Demo](4.png)
+
 # Prerequisites
 
     Python 3.8+
