@@ -1,0 +1,32 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "search_engine/wsgi.py",
+        "use": "@vercel/python",
+        "config": {"maxLmabdaSize": "15mb", "runtime": "python3.9"}
+      }
+     
+    ],
+    "routes": [
+      {
+        "src": "/static/(.*)",
+        "dest": "/static/$1"
+      },
+      {
+        "src": "/media/(.*)",
+        "dest": "/media/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "search_engine/wsgi.py"
+      }
+    ],
+    "env": {
+      "DJANGO_SETTINGS_MODULE": "search_engine.settings",
+      "SECRET_KEY": "@your_secret_key",
+      "DEBUG": "false",
+      "ALLOWED_HOSTS": ".vercel.app"
+    }
+  }
+  
