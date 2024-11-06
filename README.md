@@ -1,4 +1,4 @@
-# django_search_engine
+# 1. django_search_engine
 
 A simple search engine application built with Django that allows users to upload documents, process them, and query for similar documents based on their content.
 Features
@@ -10,7 +10,16 @@ Features
 
 
 ## Demo 
-![ Demo](1.png) ![ Demo](2.png) ![ Demo](3.png) ![ Demo](4.png)
+Below is a screenshot of the application in action:
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="1.png" alt="Demo 1" width="45%" />
+    <img src="2.png" alt="Demo 2" width="45%" />
+</div>
+<div style="display: flex; justify-content: space-between; margin-top: 10px;">
+    <img src="3.png" alt="Demo 3" width="45%" />
+    <img src="4.png" alt="Demo 4" width="45%" />
+</div>
 
 # Prerequisites
 
@@ -94,18 +103,86 @@ bash
 
 ## File Overview
 
-    views.py: Contains the core functionality for uploading, processing, querying, and deleting documents.
-        preprocess_data: Cleans and preprocesses document text.
-        upload_document_page: Renders the upload document page.
-        upload_and_process_documents: Handles document upload and processing.
-        query_page: Renders the query page.
-        process_query: Processes the search query and returns similar documents.
-        get_similar_articles: Calculates and returns similar documents based on the query.
-        extract_text_from_pdf: Extracts text from PDF files.
-        extract_text_from_docx: Extracts text from DOCX files.
-        extract_text_from_txt: Extracts text from TXT files.
-        delete_document: Deletes a document from the database.
-        document_list: Displays a list of all documents.
+views.py
+
+Contains the core functionality for uploading, processing, querying, and deleting documents:
+
+**preprocess_data**: Cleans and preprocesses document text.
+**upload_document_page**: Renders the upload document page.
+**upload_and_process_documents**: Handles document upload and processing.
+**query_page**: Renders the query page.
+**process_query**: Processes the search query and returns similar documents.
+**get_similar_articles**: Calculates and returns similar documents based on the query.
+**extract_text_from_pdf**: Extracts text from PDF files.
+**extract_text_from_docx**: Extracts text from DOCX files.
+**extract_text_from_txt**: Extracts text from TXT files.
+**delete_document**: Deletes a document from the database.
+**document_list**: Displays a list of all documents.
+
+
+# 2. Flask Web Crawler
+
+## Overview
+The **Product Similarity Finder** is a Python-based web application designed to scrape e-commerce sites for product data and help users find similar products based on a target product's name and price. The project leverages web scraping techniques, natural language processing, and a Flask-powered frontend for an interactive user experience.
+
+## Features
+- **Web Scraping**: Gathers product information from e-commerce sites using `requests` and `BeautifulSoup`.
+- **Name Preprocessing**: Cleans and standardizes product names using `nltk` tools.
+- **Price Extraction**: Extracts numeric values from price strings and handles data gracefully.
+- **Similarity Calculation**: Uses `SequenceMatcher` to evaluate name similarity and calculates price deviation for product ranking.
+- **Frontend Interface**: User-friendly web interface for inputting product details and displaying results.
+- **Caching**: Saves and loads product data to/from JSON and CSV files for efficient data retrieval.
+
+## Technologies Used
+- **Backend**: Python, Flask
+- **Web Scraping**: `requests`, `BeautifulSoup`
+- **Data Processing**: `nltk`, `csv`, `json`, `collections`
+- **Frontend**: HTML, CSS
+- **Styling**: Custom CSS for an appealing UI
+
+## Installation
+
+### Prerequisites
+- Python 3.x
+- `pip` (Python package manager)
+
+### Steps to Install
+1. **Clone the repository:**
+2. **Install the required Python packages:**
+3. **Download NLTK data:**
+    ```bash
+    import nltk
+    nltk.download('stopwords')
+    nltk.download('punkt')
+    ```
+## Running the Application
+
+1. **Start the Flask server:**
+
+    python app.py
+
+2. **Access the web app:** Open your web browser and go to http://127.0.0.1:5000/.
+
+## Demo 
+
+Below is a screenshot of the application in action:
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="images/crawler1.png1.png" alt="Demo 1" width="45%" />
+    <img src="images/crawler2,.png.png" alt="Demo 2" width="45%" />
+</div>
+
+## Usage Guide
+
+1. ### Enter Details:
+    Provide the target product name and price.
+    Specify how many similar products to retrieve.
+
+2.  ### Submit Form:
+    Click on the "Find Similar Products" button.
+
+3. ### View Results:
+    The page will display a list of similar products ranked by their overall similarity score.
 
 ## Contributing
 
