@@ -204,7 +204,7 @@ def extract_text_from_txt(file):
 # @login_required
 def delete_document(request, document_id):
     document = get_object_or_404(Document, id=document_id)
-    
+     
     # Delete the document
     document.delete()
     
@@ -217,3 +217,6 @@ def document_list(request):
 
     # Pass the documents to the template
     return render(request, 'document_list.html', {'documents': documents})
+
+def search_crawler(request):
+    return render(request, 'query_crawler.html')

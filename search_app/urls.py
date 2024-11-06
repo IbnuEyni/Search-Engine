@@ -8,4 +8,4 @@ urlpatterns = [
     path('process_query/', views.process_query, name='process_query'),
     path('documents/', views.document_list, name='list_documents_page'),
     path('delete_document/<int:document_id>/', views.delete_document, name='delete_document'),
-]
+] 
