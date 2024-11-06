@@ -13,12 +13,12 @@ Features
 Below is a screenshot of the application in action:
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="1.png" alt="Demo 1" width="45%" />
-    <img src="2.png" alt="Demo 2" width="45%" />
+    <img src="images/1.png" alt="Demo 1" width="45%" />
+    <img src="images/2.png" alt="Demo 2" width="45%" />
 </div>
 <div style="display: flex; justify-content: space-between; margin-top: 10px;">
-    <img src="3.png" alt="Demo 3" width="45%" />
-    <img src="4.png" alt="Demo 4" width="45%" />
+    <img src="images/3.png" alt="Demo 3" width="45%" />
+    <img src="images/4.png" alt="Demo 4" width="45%" />
 </div>
 
 # Prerequisites
@@ -168,8 +168,8 @@ The **Product Similarity Finder** is a Python-based web application designed to 
 Below is a screenshot of the application in action:
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="images/crawler1.png1.png" alt="Demo 1" width="45%" />
-    <img src="images/crawler2,.png.png" alt="Demo 2" width="45%" />
+    <img src="images/crawler1.png1" alt="Demo 1" width="45%" />
+    <img src="images/crawler2,.png" alt="Demo 2" width="45%" />
 </div>
 
 ## Usage Guide
