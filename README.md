@@ -12,13 +12,13 @@ Features
 ## Demo 
 Below is a screenshot of the application in action:
 
-<div style="display: flex; justify-content: space-between;">
-    <img src="images/1.png" alt="Demo 1" width="45%" />
-    <img src="images/3.png" alt="Demo 2" width="45%" />
-</div>
 <div style="display: flex; justify-content: space-between; margin-top: 10px;">
     <img src="images/4.png" alt="Demo 4" width="45%" />
     <img src="images/2.png" alt="Demo 3" width="45%" />
+</div>
+<div style="display: flex; justify-content: space-between;">
+    <img src="images/1.png" alt="Demo 1" width="45%" />
+    <img src="images/3.png" alt="Demo 2" width="45%" />
 </div>
 
 # Prerequisites
@@ -35,49 +35,36 @@ Below is a screenshot of the application in action:
 
 ## Clone the repository:
 
-    bash
-
-git clone https://github.com/yourusername/django-search-engine-app.git
-cd django-search-engine-app
+    git clone https://github.com/yourusername/django-search-engine-app.git
+    cd django-search-engine-app
 
 ## Create a virtual environment and activate it:
 
-bash
-
-python -m venv env
-source env/bin/activate  # On Windows use: env\Scripts\activate
+    python -m venv env
+    source env/bin/activate  # On Windows use: env\Scripts\activate
 
 ## Install the required packages:
 
-bash
-
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 ## Download NLTK data:
 
 In the Django shell, run:
 
-python
-
-import nltk
-nltk.download('stopwords')
-nltk.download('wordnet')
-nltk.download('punkt')
+    import nltk
+    nltk.download('stopwords')
+    nltk.download('wordnet')
+    nltk.download('punkt')
 
 ## Apply database migrations:
 
-bash 
-
-python manage.py migrate
+    python manage.py migrate
 
 ## Create a superuser (optional):
 
-bash 
-
-python manage.py createsuperuser
+    python manage.py createsuperuser
 
 ## Run the development server:
-bash 
 
     python manage.py runserver
 
@@ -103,21 +90,19 @@ bash
 
 ## File Overview
 
-views.py
-
 Contains the core functionality for uploading, processing, querying, and deleting documents:
 
-**preprocess_data**: Cleans and preprocesses document text.
-**upload_document_page**: Renders the upload document page.
-**upload_and_process_documents**: Handles document upload and processing.
-**query_page**: Renders the query page.
-**process_query**: Processes the search query and returns similar documents.
-**get_similar_articles**: Calculates and returns similar documents based on the query.
-**extract_text_from_pdf**: Extracts text from PDF files.
-**extract_text_from_docx**: Extracts text from DOCX files.
-**extract_text_from_txt**: Extracts text from TXT files.
-**delete_document**: Deletes a document from the database.
-**document_list**: Displays a list of all documents.
+- **preprocess_data**: Cleans and preprocesses document text.
+- **upload_document_page**: Renders the upload document page.
+- **upload_and_process_documents**: Handles document upload and processing.
+- **query_page**: Renders the query page.
+- **process_query**: Processes the search query and returns similar documents.
+- **get_similar_articles**: Calculates and returns similar documents based on the query.
+- **extract_text_from_pdf**: Extracts text from PDF files.
+- **extract_text_from_docx**: Extracts text from DOCX files.
+- **extract_text_from_txt**: Extracts text from TXT files.
+- **delete_document**: Deletes a document from the database.
+- **document_list**: Displays a list of all documents.
 
 
 # 2. Flask Web Crawler
